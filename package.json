@@ -2,7 +2,7 @@
   "name": "react-homework-template",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://MaxDM2021.github.io/test-camp-reenbit/",
+  "homepage": "https://MaxDM2021.github.io/test-01-camp-reenbit/",
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
