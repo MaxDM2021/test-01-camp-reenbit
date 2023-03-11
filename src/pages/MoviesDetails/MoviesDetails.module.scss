@@ -1,0 +1,101 @@
+.details{
+    padding: 15px;
+}
+.button{
+    width: 150px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff00;
+    border: none;
+    border-radius: 2px;
+    font-family: Roboto,sans-serif;
+    letter-spacing: .02em;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #000;
+    transition-property: all;
+    transition-duration: 500ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover{
+        border: 1px solid #ffffff90;;
+    }
+}
+.card{
+    display: flex;
+}
+.img{
+    width: 392px;
+    height: 574px;
+    border-radius: 2px;
+}
+.info{
+    margin: 10px;
+}
+.title{
+    font-family: Roboto,sans-serif;
+    letter-spacing: .02em;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+    color:  #000;
+    text-align: center;
+}
+.list{
+    padding: 0;
+    list-style: none;
+}
+.item{
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+.titleItem{
+    width: 100px;
+    font-family: Roboto,sans-serif;
+    letter-spacing: .02em;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #000;
+}
+.textItem{
+    font-family: Roboto,sans-serif;
+    letter-spacing: .02em;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #000;
+    text-align: justify;
+}
+
+.informationText{
+    font-family: Roboto,sans-serif;
+    letter-spacing: .02em;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    color:#000;
+    text-align: center;
+}
+.informationBottom{
+    display: flex;
+    justify-content: space-around;
+}
+.informationLink{
+    text-decoration: none;
+    font-family: Roboto,sans-serif;
+    letter-spacing: .02em;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #000;
+    transition-property: all;
+    transition-duration: 500ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover{
+        border-bottom: 2px solid #ffffff90;;
+    }
+}

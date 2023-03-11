@@ -1,0 +1,49 @@
+.text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1.07;
+    letter-spacing: 0.03em;
+    font-style:oblique;
+}
+.list{
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.item{
+    position: relative;
+}
+.link{
+    display: block;
+    text-decoration: none;
+}
+.img{
+    width: 392px;
+    height: 574px;
+    border-radius: 2px;
+}
+.info{
+    position: absolute;
+    bottom: 0;
+    right: 0%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff50;
+    font-family: Roboto,sans-serif;
+    letter-spacing: .02em;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: rgb(39, 46, 52);
+}
