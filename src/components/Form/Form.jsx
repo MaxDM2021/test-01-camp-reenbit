@@ -1,3 +1,5 @@
+import { ImSearch } from 'react-icons/im';
+
 import PropTypes from 'prop-types';
 import FormSCSS from './Form.module.scss'
 
@@ -8,17 +10,23 @@ export const Form = ({ submit, searchMovieValue, onChang }) => {
     };
     
     return (
-        <form id="search-form" autoComplete="off" onSubmit={submit} className={FormSCSS.form}>
+        <form id="search-form" autoComplete="off" onSubmit={submit} className={FormSCSS.SearchForm}>
+                 <button type="submit" className={FormSCSS.SearchFormButton}>
+        <ImSearch />
+        <span className={FormSCSS.SearchFormButtonLabel}>Search</span>
+      </button>
+           
+           
             <input
-                className={FormSCSS.input}
+                className={FormSCSS.SearchFormInput}
                 type="text"
                 name="name"
                 autoFocus
-                placeholder="Search movies"
+                placeholder="Filter by name..."
                 onChange={onChange}
                 value={searchMovieValue}
             />
-            <button type="submit" className={FormSCSS.submit}>Search</button>
+           
         </form>
     )
 }

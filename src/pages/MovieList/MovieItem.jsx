@@ -18,9 +18,9 @@ export const MovieItem = ({movie}) => {
                     className={MovieListSCSS.img}
                 />
                 <div className={MovieListSCSS.info}>
-                    <ul>
-                    <li><h3>{movie.name}</h3> </li>
-                    <li><h3>{movie.species}</h3></li>
+                    <ul className={MovieListSCSS.infoList}>
+                    <li className={MovieListSCSS.infoItem}><h3>{movie.name}</h3></li>
+                    <li className={MovieListSCSS.infoItemData}><h3>{movie.species}</h3></li>
                     </ul>
                 </div>
             </Link>

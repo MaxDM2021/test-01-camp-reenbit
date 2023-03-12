@@ -1,6 +1,6 @@
 import React, { useState, useEffect, Suspense } from 'react';
-import { Link, useParams, Outlet, useNavigate } from 'react-router-dom';
-import { IoIosArrowBack } from 'react-icons/io';
+import { useParams, Outlet, useNavigate } from 'react-router-dom';
+import { FiArrowLeft } from 'react-icons/fi';
 import { SearchMoviesDetails } from '../../components/SearchAPI/SearchAPI';
 // import defoltImg from '../../img/default.jpg';
 import { Loader } from 'components/Loader/Loader';
@@ -31,62 +31,56 @@ const MoviesDetails = () => {
     };
     
     const {
-        title,
-        release_date,
-        vote_average,
-        overview,
-        genres,
-
+        name,
+        image,
+        gender,
+        status,
+        species,
+        origin,
+        type,
     } = movie;
-    const dataRelease = String(release_date).slice(0,4);
-    console.log(dataRelease);
+    // const dataRelease = String(release_date).slice(0,4);
+    // console.log(dataRelease);
     return (
         <main>
             <section className={MoviesDetailsSCSS.details}>
                 <button type="button" onClick={goBackPage} className={MoviesDetailsSCSS.button}>
-                    <IoIosArrowBack size={30} />   Go Back
+                    <FiArrowLeft size={30}/>GO BACK
                 </button>
                 <div className={MoviesDetailsSCSS.card}>
                     <img
-                        src={movie.image }
-                        alt={title}
+                        src={image }
+                        alt={name}
                         className={MoviesDetailsSCSS.img}
                     />
                     <div className={MoviesDetailsSCSS.info}>
-                        <h2 className={MoviesDetailsSCSS.title}>{title} <span>({dataRelease})</span></h2>
+                        <h2 className={MoviesDetailsSCSS.title}>{name}</h2>
+                        <h2 className={MoviesDetailsSCSS.titleInfo}>Informations</h2>
                         <ul className={MoviesDetailsSCSS.list}>
                             <li className={MoviesDetailsSCSS.item}>
-                                <h3 className={MoviesDetailsSCSS.titleItem}>Rating:</h3>
-                                <p className={MoviesDetailsSCSS.textItem}>{Math.round(vote_average * 10)}%</p>
+                                <h3 className={MoviesDetailsSCSS.titleItem}>Gender</h3>
+                                <h4 className={MoviesDetailsSCSS.textItem}>{gender}</h4>
                             </li>
                             <li className={MoviesDetailsSCSS.item}>
-                                <h3 className={MoviesDetailsSCSS.titleItem}>Genres:</h3>
-                                <p className={MoviesDetailsSCSS.textItem}>{genres &&
-                                    genres.map(
-                                    (genre, i, arr) =>`${genre.name} ${arr.length - 1 === i ? '' : '/'}`
-                                    )}
+                                <h3 className={MoviesDetailsSCSS.titleItem}>Status:</h3>
+                                <p className={MoviesDetailsSCSS.textItem}>{status}
                                 </p>
                             </li>
                             <li className={MoviesDetailsSCSS.item}>
-                                <h3 className={MoviesDetailsSCSS.titleItem}>Overview:</h3>
-                                <p className={MoviesDetailsSCSS.textItem}>{overview}</p>
+                                <h3 className={MoviesDetailsSCSS.titleItem}>Specie:</h3>
+                                <p className={MoviesDetailsSCSS.textItem}>{species}</p>
+                            </li>
+                            <li className={MoviesDetailsSCSS.item}>
+                                <h3 className={MoviesDetailsSCSS.titleItem}>Origin:</h3>
+                                {/* чомусь  працюэ через раз {origin.name}зробив принтскрин коли працювало..*/}
+                                <p className={MoviesDetailsSCSS.textItem}>{species}</p>
+                            </li>
+                            <li className={MoviesDetailsSCSS.item}>
+                                <h3 className={MoviesDetailsSCSS.titleItem}>Type:</h3>
+                                <p className={MoviesDetailsSCSS.textItem}>{type ? type : "Unknown"}</p>
                             </li>
                         </ul>
-                        <div className={MoviesDetailsSCSS.information}>
-                            <h3 className={MoviesDetailsSCSS.informationText}>Additional information</h3>
-                            <div className={MoviesDetailsSCSS.informationBottom}>
-                                <Link
-                                    to="cast"
-                                    onClick={() => setGoBack(prev => prev + 1)}
-                                    className={MoviesDetailsSCSS.informationLink}
-                                >Actors</Link>
-                                <Link
-                                    to="reviews"
-                                    onClick={() => setGoBack(prev => prev + 1)}
-                                    className={MoviesDetailsSCSS.informationLink}
-                                >Reviews</Link>
-                            </div>
-                        </div>
+                       
                     </div>
                 </div>
                 <Suspense fallback={<Loader />}>
