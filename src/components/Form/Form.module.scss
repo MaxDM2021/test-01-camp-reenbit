@@ -44,15 +44,16 @@
 
 .SearchForm {
  display: flex;
- margin-right: auto;
- margin-left: auto;
- margin-top: 20px;
- margin-bottom: 20px;
+ margin: 20px;
+ margin-bottom: 73px;
+ 
  width: 100%;
- max-width: 600px;
+justify-content: center;
+align-items: center;
+align-content: center;
  background-color: #fff;
  border-radius: 10px;
- border: solid 2px black;
+ border: solid 2px #8E8E93;
  overflow: hidden;
 
 }

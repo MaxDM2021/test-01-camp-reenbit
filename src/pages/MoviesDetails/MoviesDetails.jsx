@@ -2,8 +2,6 @@ import React, { useState, useEffect, Suspense } from 'react';
 import { useParams, Outlet, useNavigate } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
 import { SearchMoviesDetails } from '../../components/SearchAPI/SearchAPI';
-// import defoltImg from '../../img/default.jpg';
-import { Loader } from 'components/Loader/Loader';
 import MoviesDetailsSCSS from './MoviesDetails.module.scss'
 
 const MoviesDetails = () => {
@@ -25,11 +23,10 @@ const MoviesDetails = () => {
 
     const serverAPI = async () => {
         const data = await SearchMoviesDetails(id);
-        // const results = await data.results;
-        // console.log(results);
         setMovie(data);
     };
-    
+
+
     const {
         name,
         image,
@@ -39,8 +36,9 @@ const MoviesDetails = () => {
         origin,
         type,
     } = movie;
-    // const dataRelease = String(release_date).slice(0,4);
-    // console.log(dataRelease);
+
+console.log("movie: ", movie);
+
     return (
         <main>
             <section className={MoviesDetailsSCSS.details}>
@@ -49,7 +47,7 @@ const MoviesDetails = () => {
                 </button>
                 <div className={MoviesDetailsSCSS.card}>
                     <img
-                        src={image }
+                        src={image}
                         alt={name}
                         className={MoviesDetailsSCSS.img}
                     />
@@ -83,7 +81,7 @@ const MoviesDetails = () => {
                        
                     </div>
                 </div>
-                <Suspense fallback={<Loader />}>
+                <Suspense fallback={null}>
                     <Outlet />
                 </Suspense>
             </section>

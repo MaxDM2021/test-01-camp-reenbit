@@ -8,7 +8,7 @@
     font-size: 30px;
     line-height: 1.07;
     letter-spacing: 0.03em;
-    font-style:oblique;
+    font-style: oblique;
 }
 .list{
     padding: 0;
@@ -17,14 +17,16 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    margin-left: auto;
-    margin-right: auto;
+    gap: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
+
+
 .item{
     position: relative;
     width: 240px;
-    border: solid 1px #8E8E93;
+    border: solid 2px #8E8E93;
     border-radius: 8px;
 
     &:hover,

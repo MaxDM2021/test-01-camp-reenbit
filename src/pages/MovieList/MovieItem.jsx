@@ -5,12 +5,15 @@ import defoltImg from '../../img/default.jpg'
 
 export const MovieItem = ({movie}) => {
     const location = useLocation();
-    const url = location.pathname === '/' ? `movies/` : '';
+
+    const url = `movies/${movie.id}`;
+    
     return (
         <li  className={MovieListSCSS.item}>
             <Link
-            to={`${url}${movie.id}`}
+            to={`${url}`}
             className={MovieListSCSS.link}
+            state={{ from: location }} 
             >
                 <img
                     src={movie.image ? movie.image : defoltImg }

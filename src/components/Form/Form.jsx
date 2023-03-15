@@ -1,3 +1,58 @@
+// import React, { useState } from 'react';
+// import { useDebouncedCallback } from 'use-debounce';
+
+// import SearchList from '../../pages/MovieSearch/MovieSearch';
+
+
+
+// import FormSCSS from './Form.module.scss'
+
+
+// const delay = 400;
+
+
+
+// const Search = () => {
+//   const [searchString, setSearchString] = useState('');
+//   const [filter, setFilter] = useState('');
+
+
+//   const debouncedSetFilter = useDebouncedCallback(
+//     filter => setFilter(filter),
+//     delay
+//   );
+
+//   const onChangeSearch = e => {
+//     const { value } = e.target;
+//     setSearchString(value);
+//     debouncedSetFilter(value);
+
+//   };
+
+//   return (
+//     <div>
+//       <input
+//         type="text"
+//         name="name"
+//         value={searchString}
+//         onChange={onChangeSearch}
+//         className={FormSCSS.SearchFormInput} 
+//        autoFocus
+//         placeholder="Filter by name..."
+//       />
+
+
+//       <SearchList filter={filter} />
+//     </div>
+//   );
+// };
+
+// export default Search;
+
+
+// ================================
+
+
 import { ImSearch } from 'react-icons/im';
 
 import PropTypes from 'prop-types';

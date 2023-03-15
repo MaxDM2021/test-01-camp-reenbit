@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
 
-import { SearchTrend } from '../../components/SearchAPI/SearchAPI';
+import { SearchAllCharacters } from '../../components/SearchAPI/SearchAPI';
 import { MovieItem } from './MovieItem';
 
 import MovieListSCSS from './MovieList.module.scss';
@@ -9,7 +9,7 @@ import { Loader } from 'components/Loader/Loader';
 
 const MovieList = ({list}) => {
   const [movies, setMovies] = useState([]);
-  const [title, setTitle] = useState(true);
+  const [name, setTitle] = useState(true);
   const [loader, setLoader] = useState(false);
 
   useEffect(() => {
@@ -23,16 +23,16 @@ const MovieList = ({list}) => {
 
   const serverAPI = async () => {
     setLoader(true);
-    const data = await SearchTrend();
+    const data = await SearchAllCharacters();
     const results = await data.results;
-    console.log(results);
+    console.log("results: ", results );
     setMovies(results);
     return setLoader(false);
   };
 
   return (
     <section>
-      {title && <h2 className={MovieListSCSS.text}>Trending today</h2>}
+      {name && <h2 className={MovieListSCSS.text}>Trending today</h2>}
       {loader && <Loader />}
       <ul className={MovieListSCSS.list}>
         {movies.map(movie => (
