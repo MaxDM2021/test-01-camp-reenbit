@@ -33,7 +33,6 @@ const MoviesDetails = () => {
         gender,
         status,
         species,
-        origin,
         type,
     } = movie;
 
