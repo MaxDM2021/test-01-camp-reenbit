@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react';
 import { useSearchParams} from 'react-router-dom';
 import { SearchCharacters } from '../../components/SearchAPI/SearchAPI';
 import { Form } from 'components/Form/Form';
-import { MovieItem } from '../MovieList/MovieItem';
+import { MovieItem } from '../MovieItem/MovieItem';
 import { Loader } from 'components/Loader/Loader';
-import MovieListSCSS from '../MovieList/MovieList.module.scss';
+import MovieListSCSS from '../MovieItem/MovieList.module.scss';
 import MovieSearchSCSS from './MovieSearch.module.scss';
 
 
@@ -49,6 +49,11 @@ const MovieSearch = () => {
     setLoader(false);
   };
 
+
+
+
+
+
   return (
     <main>
       <section>
@@ -71,6 +76,15 @@ const MovieSearch = () => {
           </ul>
         )}
       </section>
+
+
+
+
+
+
+
+
+
     </main>
   );
 };

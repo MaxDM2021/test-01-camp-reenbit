@@ -10,7 +10,6 @@ export const HeaderAll = () => {
         <section className={HeaderSCSS.section}>
             <header className={HeaderSCSS.header}/>
             <MovieSearch/>
-            {/* <MovieList/> */}
             <Suspense fallback={<Loader/>}>
                 <Outlet/>
             </Suspense>

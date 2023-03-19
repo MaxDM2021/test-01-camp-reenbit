@@ -15,9 +15,6 @@ export const App = () => {
   return (
     <Routes>
       <Route path="/" exact element={<HeaderAll />} />
-      {/* <Route path="/login" element={<LoginForm />} />
-      <Route path="/register" element={<RegisterForm />} /> */}
-      {/* <Route index element={<MovieList />} /> */}
       <Route path="movies" element={<MovieSearch />} />
       <Route path="movies/:id" element={<MoviesDetails />} />
       <Route path="*" element={<PageNotFound />} />
