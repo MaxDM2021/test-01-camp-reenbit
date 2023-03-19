@@ -24,6 +24,7 @@ const MoviesDetails = () => {
     const serverAPI = async () => {
         const data = await SearchMoviesDetails(id);
         setMovie(data);
+        console.log("data: ", data);
     };
 
 
@@ -36,7 +37,7 @@ const MoviesDetails = () => {
         type,
     } = movie;
 
-console.log("movie: ", movie);
+console.log("character details: ", movie);
 
     return (
         <main>

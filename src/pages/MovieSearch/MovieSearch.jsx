@@ -9,6 +9,7 @@ import MovieSearchSCSS from './MovieSearch.module.scss';
 
 
 
+
 const MovieSearch = () => {
 
   const [searchMovieValue, setSearchMovieValue] = useState('');
@@ -49,6 +50,11 @@ const MovieSearch = () => {
     setLoader(false);
   };
 
+
+
+
+
+
   return (
     <main>
       <section>
@@ -71,6 +77,15 @@ const MovieSearch = () => {
           </ul>
         )}
       </section>
+
+
+
+
+
+
+
+
+
     </main>
   );
 };

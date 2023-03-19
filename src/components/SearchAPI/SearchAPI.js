@@ -48,7 +48,7 @@ export const SearchMoviesDetails = async (id) => {
     
 
     const serverDataURL = `${BASE_URL}/character/${id}`;
-    console.log("serverDataURL: ", serverDataURL)
+    console.log("!!!!!serverDataURL: ", serverDataURL)
     try {
         const server = await axios.get(serverDataURL);
         const data = await server.data;
