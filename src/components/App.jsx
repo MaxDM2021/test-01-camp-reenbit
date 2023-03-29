@@ -10,6 +10,9 @@ const MovieSearch = lazy(() => import('../pages/MovieSearch/MovieSearch'));
 // const Cast = lazy(() => import('../pages/Cast/Cast'));
 // const Reviews = lazy(() => import('../pages/Reviews/Reviews'));
 const PageNotFound = lazy(() => import('../pages/PageNotFound/PageNotFound'));
+const Register = lazy(() => import('./Auth/Register'));
+const Login = lazy(() => import('./Auth/Login.jsx'));
+
 
 export const App = () => {
   return (
@@ -18,6 +21,8 @@ export const App = () => {
       <Route path="movies" element={<MovieSearch />} />
       <Route path="movies/:id" element={<MoviesDetails />} />
       <Route path="*" element={<PageNotFound />} />
+      <Route path="/register" element={<Register/>} />
+      <Route path="/login" element={<Login/>} />
     </Routes>
   );
 };
